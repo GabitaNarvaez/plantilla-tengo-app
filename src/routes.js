@@ -5,10 +5,10 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
 // core components/views for Admin layout
-import DashboardPage from "views/Dashboard/Dashboard.js";
-import UserProfile from "views/UserProfile/UserProfile.js";
-import TableList from "views/TableList/TableList.js";
-import Typography from "views/Typography/Typography.js";
+import DashboardPage from "views/Dashboard/Dashboard";
+import UserProfile from "views/UserProfile/UserProfile";
+import Productos from "views/Producto/Productos";
+import Pedidos from "views/Pedido/Pedidos";
 
 const dashboardRoutes = [
   {
@@ -22,14 +22,14 @@ const dashboardRoutes = [
     path: "/table",
     name: "Productos",
     icon: AssignmentIcon,
-    component: TableList,
+    component: Productos,
     layout: "/admin"
   },
   {
     path: "/pedidos",
     name: "Pedidos",
     icon: ShoppingCartIcon,
-    component: Typography,
+    component: Pedidos,
     layout: "/admin"
   },
   {
