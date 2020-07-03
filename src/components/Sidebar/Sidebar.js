@@ -10,7 +10,6 @@ import Hidden from "@material-ui/core/Hidden";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import Icon from "@material-ui/core/Icon";
 
 import styles from "assets/jss/material-dashboard-react/components/sidebarStyle.js";
 
@@ -43,17 +42,9 @@ export default function Sidebar(props) {
             key={key}
           >
             <ListItem button className={classes.itemLink + listItemClasses}>
-              {typeof prop.icon === "string" ? (
-                <Icon
-                  className={classNames(classes.itemIcon)}
-                >
-                  {prop.icon}
-                </Icon>
-              ) : (
-                <prop.icon
-                  className={classNames(classes.itemIcon)}
-                />
-              )}
+              <prop.icon
+                className={classNames(classes.itemIcon)}
+              />
               <ListItemText
                 primary={ prop.name }
                 className={classNames(classes.itemText)}
